@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Counter from './components/Counter'
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-full h-screen bg-gray-100">
+      <Navbar/>
+      <div id='dashboard' className='w-full mt-5 px-5 gap-2 grid sm:grid-cols-1 md:grid-cols-2 md:gap-2 lg:grid-cols-4'>
+        <Counter/>
+        <Counter/>
+        <Counter/>
+        <Counter/>
+        <Counter/>
+      </div>
     </div>
   );
 }
